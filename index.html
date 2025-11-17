@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG dedicada à proteção e bem-estar animal. Adote, doe e seja voluntário na transformação de vidas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="keywords" content="ONG, proteção animal, adoção, doação, voluntariado, pets">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Guardião Pet</title>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-paw"></i></div>
+                    <span>Guardião Pet</span>
+                </a>
+                
+                <!-- Menu Desktop -->
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#projects" class="nav-link">Projetos</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">Adoção</a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">Castração</a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">Resgate</a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">Educação</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#volunteer" class="nav-link">Voluntariado</a></li>
+                        <li class="nav-item"><a href="#news" class="nav-link">Notícias</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><button class="btn btn-primary" onclick="openDonationModal()">Doar Agora</button></li>
+                    </ul>
+                </nav>
+                
+                <!-- Toggle Mobile -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Início</a></li>
+                <li><a href="#about" class="mobile-nav-link">Sobre</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projetos</a></li>
+                <li><a href="#volunteer" class="mobile-nav-link">Voluntariado</a></li>
+                <li><a href="#news" class="mobile-nav-link">Notícias</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contato</a></li>
+                <li><button class="btn btn-primary" style="width: 100%;" onclick="openDonationModal()">Doar Agora</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transformando Vidas, Uma Pata de Cada Vez</h1>
+                <p class="hero-description">Somos uma ONG dedicada ao resgate, proteção e bem-estar animal. Juntos, podemos fazer a diferença na vida de milhares de animais.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="openDonationModal()">Fazer uma Doação</button>
+                    <button class="btn btn-outline" onclick="openVolunteerModal()">Seja Voluntário</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">2.847</span>
+                    <span class="stat-label">Animais Resgatados</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1.523</span>
+                    <span class="stat-label">Adoções Realizadas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">358</span>
+                    <span class="stat-label">Voluntários Ativos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Projetos em Andamento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Quem Somos</h2>
+            <p class="section-subtitle">Uma organização com o coração dedicado aos animais</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nossa Missão</h3>
+                    <p>Promover o bem-estar animal através do resgate, reabilitação e adoção responsável, combatendo os maus-tratos e o abandono.</p>
+                    
+                    <h3>Nossa Visão</h3>
+                    <p>Um mundo onde todos os animais sejam tratados com respeito, dignidade e amor, vivendo em lares seguros e acolhedores.</p>
+                    
+                    <h3>Nossos Valores</h3>
+                    <p>Compaixão, transparência, responsabilidade, educação e compromisso com a causa animal.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Imagens/gatinho.jpeg" alt="Voluntários cuidando de animais" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <p class="section-subtitle">Iniciativas que transformam vidas</p>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="Imagens/garinhoemao.jpeg" alt="Campanha de Adoção" class="project-image" loading="lazy">
+                    <div class="project-content">
+                        <span class="project-badge">Ativo</span>
+                        <h3 class="project-title">Campanha de Adoção</h3>
+                        <p class="project-description">Conectando animais resgatados com famílias amorosas através de eventos e plataforma online.</p>
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span><strong>78%</strong></span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="showToast('Inscrição em desenvolvimento!', 'success')">Saiba Mais</button>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <img src="Imagens/cachorro.jpeg" alt="Castração Gratuita" class="project-image" loading="lazy">
+                    <div class="project-content">
+                        <span class="project-badge">Ativo</span>
+                        <h3 class="project-title">Castração Gratuita</h3>
+                        <p class="project-description">Programa de castração para controlar a população de animais de rua e promover saúde.</p>
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span><strong>92%</strong></span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="showToast('Inscrição em desenvolvimento!', 'success')">Saiba Mais</button>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <img src="Imagens/cachorroTomandoBanho.jpeg" alt="Resgate Animal" class="project-image" loading="lazy">
+                    <div class="project-content">
+                        <span class="project-badge">Urgente</span>
+                        <h3 class="project-title">Resgate 24 Horas</h3>
+                        <p class="project-description">Equipe de resgate disponível para atender casos de emergência e maus-tratos.</p>
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span><strong>65%</strong></span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="showToast('Inscrição em desenvolvimento!', 'success')">Saiba Mais</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOLUNTEER SECTION -->
+    <section class="volunteer" id="volunteer">
+        <div class="container">
+            <h2 class="section-title">Como Você Pode Ajudar</h2>
+            <p class="section-subtitle">Diversas formas de contribuir com nossa causa</p>
+            
+            <div class="volunteer-grid">
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Seja um Padrinho</h3>
+                    <p>Apadrinhe um animal e ajude com custos mensais de alimentação e cuidados veterinários.</p>
+                    <button class="btn btn-primary" onclick="openVolunteerModal()">Apadrinhar</button>
+                </div>
+                
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fa-solid fa-house"></i></div>
+                    <h3>Lar Temporário</h3>
+                    <p>Ofereça um lar temporário para animais em recuperação até encontrarem uma família definitiva.</p>
+                    <button class="btn btn-primary" onclick="openVolunteerModal()">Cadastrar</button>
+                </div>
+                
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>Voluntariado</h3>
+                    <p>Doe seu tempo e habilidades em eventos, divulgação ou cuidados diretos com os animais.</p>
+                    <button class="btn btn-primary" onclick="openVolunteerModal()">Inscrever-se</button>
+                </div>
+                
+                <div class="volunteer-card">
+                    <div class="volunteer-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <h3>Doações</h3>
+                    <p>Contribua financeiramente ou com ração, medicamentos e materiais para nossa estrutura.</p>
+                    <button class="btn btn-primary" onclick="openDonationModal()">Doar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION CTA -->
+    <section class="donation">
+        <div class="container">
+            <div class="donation-content">
+                <h2 class="donation-title">Sua Doação Salva Vidas</h2>
+                <p>Escolha um valor e ajude a transformar a vida de animais resgatados</p>
+                
+                <div class="donation-amounts">
+                    <div class="donation-option" onclick="selectDonation(this, 25)">
+                        <span class="donation-value">R$ 25</span>
+                        <span class="donation-description">1 refeição</span>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation(this, 50)">
+                        <span class="donation-value">R$ 50</span>
+                        <span class="donation-description">Vacinas</span>
+                    </div>
+                    <div class="donation-option active" onclick="selectDonation(this, 100)">
+                        <span class="donation-value">R$ 100</span>
+                        <span class="donation-description">Castração</span>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation(this, 200)">
+                        <span class="donation-value">R$ 200</span>
+                        <span class="donation-description">Resgate</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outline" style="background: #fff; color: var(--primary-500);" onclick="openDonationModal()">Fazer Doação</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title">Últimas Notícias</h2>
+            <p class="section-subtitle">Acompanhe nossas atividades e histórias de sucesso</p>
+            
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="Imagens/cachorroBrincando.jpeg" alt="História de adoção" class="news-image" loading="lazy">
+                    <div class="news-content">
+                        <time class="news-date">20 de Outubro, 2025</time>
+                        <h3 class="news-title">Rex Encontra um Novo Lar</h3>
+                        <p class="news-excerpt">Após 6 meses em nossa ONG, Rex foi adotado por uma família amorosa e está se adaptando perfeitamente...</p>
+                        <a href="#" class="read-more">Ler mais →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="Imagens/doacao.jpg" alt="Evento de adoção" class="news-image" loading="lazy">
+                    <div class="news-content">
+                        <time class="news-date">15 de Outubro, 2025</time>
+                        <h3 class="news-title">Feira de Adoção Bate Recorde</h3>
+                        <p class="news-excerpt">Nossa última feira de adoção resultou em 47 adoções em um único dia, superando todas as expectativas...</p>
+                        <a href="#" class="read-more">Ler mais →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <img src="Imagens/budogue.jpeg" alt="Campanha de castração" class="news-image" loading="lazy">
+                    <div class="news-content">
+                        <time class="news-date">10 de Outubro, 2025</time>
+                        <h3 class="news-title">Campanha de Castração Atinge Meta</h3>
+                        <p class="news-excerpt">Conseguimos castrar 200 animais em outubro, graças à generosidade de nossos doadores e parceiros...</p>
+                        <a href="#" class="read-more">Ler mais →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Estamos aqui para ajudar. Envie sua mensagem!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Rua Central, 123<br>Centro, Fortaleza - CE<br>CEP: 60000-000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(85) 3333-3333<br>(85) 98888-8888</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>contato@guadiaopet.org<br>voluntariado@guadiaopet.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nome Completo</label>
+                        <input type="text" id="name" class="form-input" required>
+                        <span class="form-error">Por favor, informe seu nome</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">E-mail</label>
+                        <input type="email" id="email" class="form-input" required>
+                        <span class="form-error">Por favor, informe um e-mail válido</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Assunto</label>
+                        <select id="subject" class="form-select" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="adoption">Adoção</option>
+                            <option value="volunteer">Voluntariado</option>
+                            <option value="donation">Doação</option>
+                            <option value="partnership">Parceria</option>
+                            <option value="other">Outro</option>
+                        </select>
+                        <span class="form-error">Por favor, selecione um assunto</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Mensagem</label>
+                        <textarea id="message" class="form-textarea" required></textarea>
+                        <span class="form-error">Por favor, escreva sua mensagem</span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Patas Solidárias</h3>
+                    <p>ONG dedicada ao resgate, proteção e bem-estar animal desde 2015. Transformando vidas através do amor e cuidado.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <a href="#about">Sobre Nós</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#volunteer">Voluntariado</a>
+                    <a href="#news">Notícias</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Informações</h3>
+                    <a href="#">Transparência</a>
+                    <a href="#">Prestação de Contas</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Certificados</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Receba novidades e histórias inspiradoras</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Seu e-mail" class="form-input" style="flex: 1;">
+                        <button class="btn btn-primary">Assinar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guardião Pet. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DONATION -->
+    <div class="modal" id="donationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Faça sua Doação</h2>
+                <button class="modal-close" onclick="closeModal('donationModal')" aria-label="Fechar">&times;</button>
+            </div>
+            <form id="donationForm">
+                <div class="form-group">
+                    <label class="form-label" for="donorName">Nome Completo</label>
+                    <input type="text" id="donorName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="donorEmail">E-mail</label>
+                    <input type="email" id="donorEmail" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="donationAmount">Valor da Doação (R$)</label>
+                    <input type="number" id="donationAmount" class="form-input" min="10" value="100" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="donationType">Tipo de Doação</label>
+                    <select id="donationType" class="form-select" required>
+                        <option value="single">Doação Única</option>
+                        <option value="monthly">Doação Mensal</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Continuar para Pagamento</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL VOLUNTEER -->
+    <div class="modal" id="volunteerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Cadastro de Voluntário</h2>
+                <button class="modal-close" onclick="closeModal('volunteerModal')" aria-label="Fechar">&times;</button>
+            </div>
+            <form id="volunteerForm">
+                <div class="form-group">
+                    <label class="form-label" for="volName">Nome Completo</label>
+                    <input type="text" id="volName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="volEmail">E-mail</label>
+                    <input type="email" id="volEmail" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="volPhone">Telefone</label>
+                    <input type="tel" id="volPhone" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="volArea">Área de Interesse</label>
+                    <select id="volArea" class="form-select" required>
+                        <option value="">Selecione uma área</option>
+                        <option value="care">Cuidados Diretos</option>
+                        <option value="events">Eventos</option>
+                        <option value="communication">Comunicação/Redes</option>
+                        <option value="admin">Administrativo</option>
+                        <option value="foster">Lar Temporário</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="volMessage">Por que quer ser voluntário?</label>
+                    <textarea id="volMessage" class="form-textarea" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Cadastro</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
